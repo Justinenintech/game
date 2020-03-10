@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 游戏逻辑配置: 用于红包类游戏的压测 -->
+
+<!-- 游戏类型 type: -->
+<!-- ROB_NIUNIU: 抢庄牛牛 -->
+<!-- TWO_EIGHT: 二八杠 -->
+<TestConfig version="1.0" description="QG平台压测配置">
+
+	<!-- 测试数据 -->
+	<testDataPath>data/qg-test.csv</testDataPath>
+	<!-- 网关主机配置 -->
+	<gatewayAddr>http://gateway.310823.com</gatewayAddr>
+	<!-- 游戏服务地址 -->
+	<gameAddr>https://qggame.198231.com</gameAddr>
+	<!-- 测试执行时间 :秒 -->
+	<runTime>20</runTime>
+	<!-- IM地址 -->
+	<imAddr></imAddr>
+	<!-- tenant -->
+	<tenant>qg168</tenant>
+	<!-- 是否并发: 非并发间隔时间步长(毫秒) -->
+	<concurrency wait-interval="50">false</concurrency>
+
+	<!--游戏配置 -->
+	<merchant include="true" rootKey="linking"
+		secretKey="4e6429a071374a748a9a8eae7d7181102cc275cc0f9242caa1b1e566527d3c4b"
+		agentCode="qglk">
+
+		<!-- ================================== 禁枪 ============================== -->
+		<gameGroupConfig run="false" type="NO_GRAB"
+			description="新手房">
+			<!-- 组ID -->
+			<groupId>59</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>300</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.RobniuniuVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="10" max="1000" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="100" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="10" max="50" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="9" max="9" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="NO_GRAB"
+			description="新手房">
+			<!-- 组ID -->
+			<groupId>100</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>7500</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.RobniuniuVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="10" max="1000" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="100" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="10" max="50" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="9" max="9" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="NO_GRAB"
+			description="新手房">
+			<!-- 组ID -->
+			<groupId>96</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.RobniuniuVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="10" max="1000" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="100" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="10" max="50" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="9" max="9" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="NO_GRAB"
+			description="新手房">
+			<!-- 组ID -->
+			<groupId>97</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.RobniuniuVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="10" max="1000" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="100" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="10" max="50" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="9" max="9" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="NO_GRAB"
+			description="新手房">
+			<!-- 组ID -->
+			<groupId>98</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.RobniuniuVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="10" max="1000" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="100" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="10" max="50" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="9" max="9" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="NO_GRAB"
+			description="新手房">
+			<!-- 组ID -->
+			<groupId>99</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.RobniuniuVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="10" max="1000" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="100" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="10" max="50" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="9" max="9" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+
+		</gameGroupConfig>
+
+		<!-- ================================== 扫雷 ============================== -->
+
+
+		<gameGroupConfig run="true" type="MINE_SWEEP"
+			description="新手房">
+			<!-- 组ID -->
+			<groupId>105</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>300</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.TwoEightVusers
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="10" max="1000" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="100" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="3" />
+			<!-- 发包金额范围 -->
+			.0.
+			<redPkgScope min="10" max="50" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="7" max="7" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="MINE_SWEEP"
+			description="新手房">
+			<!-- 组ID -->
+			<groupId>75</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.TwoEightVusers
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="10" max="1000" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="100" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="3" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="10" max="50" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="7" max="7" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="MINE_SWEEP"
+			description="新手房">
+			<!-- 组ID -->
+			<groupId>76</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.TwoEightVusers
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="10" max="1000" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="100" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="3" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="10" max="50" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="7" max="7" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="MINE_SWEEP"
+			description="新手房">
+			<!-- 组ID -->
+			<groupId>77</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.TwoEightVusers
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="10" max="1000" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="100" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="3" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="10" max="50" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="7" max="7" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="MINE_SWEEP"
+			description="新手房">
+			<!-- 组ID -->
+			<groupId>78</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.TwoEightVusers
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="10" max="1000" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="100" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="3" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="10" max="50" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="7" max="7" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+
+		<!-- ================================== 牛牛 ============================== -->
+		<gameGroupConfig run="false" type="NIU_NIU"
+			description="牛牛新手房">
+			<!-- 组ID -->
+			<groupId>72</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.DragonTigerVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="10" max="100" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="100" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="10" max="50" />
+			<!-- 发包时间间隔 毫秒 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="15" max="15" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="NIU_NIU"
+			description="牛牛新手房">
+			<!-- 组ID -->
+			<groupId>79</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.DragonTigerVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="10" max="100" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="100" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="10" max="50" />
+			<!-- 发包时间间隔 毫秒 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="15" max="15" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="NIU_NIU"
+			description="牛牛新手房">
+			<!-- 组ID -->
+			<groupId>80</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.DragonTigerVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="10" max="100" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="100" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="10" max="50" />
+			<!-- 发包时间间隔 毫秒 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="15" max="15" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="NIU_NIU"
+			description="牛牛新手房">
+			<!-- 组ID -->
+			<groupId>81</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.DragonTigerVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="10" max="100" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="100" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="10" max="50" />
+			<!-- 发包时间间隔 毫秒 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="15" max="15" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="NIU_NIU"
+			description="牛牛新手房">
+			<!-- 组ID -->
+			<groupId>82</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.DragonTigerVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="10" max="100" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="100" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="10" max="50" />
+			<!-- 发包时间间隔 毫秒 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="15" max="15" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="NIU_NIU"
+			description="牛牛新手房">
+			<!-- 组ID -->
+			<groupId>84</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.DragonTigerVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="10" max="100" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="100" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="10" max="50" />
+			<!-- 发包时间间隔 毫秒 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="15" max="15" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<!-- ================================== 抢庄牛牛 ============================== -->
+		<gameGroupConfig run="false" type="ROB_NIUNIU"
+			description="抢庄牛牛">
+			<!-- 组ID -->
+			<groupId>65</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.DragonTigerVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="500" max="1000" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="2" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="50" max="200" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="10" max="10" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="ROB_NIUNIU"
+			description="抢庄牛牛">
+			<!-- 组ID -->
+			<groupId>85</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.DragonTigerVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="500" max="1000" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="2" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="50" max="200" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="10" max="10" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="ROB_NIUNIU"
+			description="抢庄牛牛">
+			<!-- 组ID -->
+			<groupId>86</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.DragonTigerVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="500" max="1000" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="2" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="50" max="200" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="10" max="10" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="ROB_NIUNIU"
+			description="抢庄牛牛">
+			<!-- 组ID -->
+			<groupId>87</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.DragonTigerVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="500" max="1000" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="2" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="50" max="200" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="10" max="10" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="ROB_NIUNIU"
+			description="抢庄牛牛">
+			<!-- 组ID -->
+			<groupId>88</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.DragonTigerVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="500" max="1000" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="2" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="50" max="200" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="10" max="10" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="ROB_NIUNIU"
+			description="抢庄牛牛">
+			<!-- 组ID -->
+			<groupId>89</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.DragonTigerVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="500" max="1000" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="2" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="50" max="200" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="10" max="10" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+
+		<!-- ================================== 二八杠 ============================== -->
+		<gameGroupConfig run="false" type="TWO_EIGHT"
+			description="二八杠">
+			<!-- 组ID -->
+			<groupId>63</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.DragonTigerVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="100" max="200" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="5" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="3" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="50" max="200" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="10" max="10" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="TWO_EIGHT"
+			description="二八杠">
+			<!-- 组ID -->
+			<groupId>90</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.DragonTigerVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="300" max="500" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="5" max="12" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="10" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="50" max="200" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="10" max="10" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="TWO_EIGHT"
+			description="二八杠">
+			<!-- 组ID -->
+			<groupId>91</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.DragonTigerVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="100" max="300" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="10" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="3" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="50" max="200" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="10" max="10" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="TWO_EIGHT"
+			description="二八杠">
+			<!-- 组ID -->
+			<groupId>92</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.DragonTigerVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="200" max="800" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="5" max="16" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="3" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="50" max="200" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="10" max="10" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="TWO_EIGHT"
+			description="二八杠">
+			<!-- 组ID -->
+			<groupId>93</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.DragonTigerVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="100" max="400" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="5" max="15" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="3" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="50" max="200" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="10" max="10" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<gameGroupConfig run="false" type="TWO_EIGHT"
+			description="二八杠">
+			<!-- 组ID -->
+			<groupId>94</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>30</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.DragonTigerVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="500" max="800" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="8" max="20" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="3" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="50" max="200" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="10" max="10" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<!-- ================================== 接龙 ============================== -->
+
+		<gameGroupConfig run="false" type="SOLITAIRE"
+			description="接龙">
+			<!-- 组ID -->
+			<groupId>123</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>50</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.DragonTigerVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="800" max="1000" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="5" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="15" max="25" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="50" max="200" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="10" max="10" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+
+		<!-- ================================== 龙虎斗 ============================== -->
+		<gameGroupConfig run="false" type="DRAGON_TIGER"
+			description="龙虎斗">
+			<!-- 组ID -->
+			<groupId>19</groupId>
+			<!-- 入群密码 -->
+			<groupPasswd></groupPasswd>
+			<!-- 用户数 -->
+			<vuserNums>15</vuserNums>
+			<!-- 虚拟用户实现类 -->
+			<vuserClass>com.fy.test.app.loadgenerator.vusers.DragonTigerVuser
+			</vuserClass>
+			<!-- 抢庄金额范围 -->
+			<robMoneyScope min="10" max="1000" />
+			<!-- 抢庄时间间隔 -->
+			<robPeriodScope min="1" max="5" />
+			<!-- 投注金额范围 -->
+			<betMoneyScope min="1" max="100" />
+			<!-- 投注时间间隔 -->
+			<betPeriodScope min="1" max="5" />
+			<!-- 发包金额范围 -->
+			<redPkgScope min="50" max="200" />
+			<!-- 发包时间间隔 -->
+			<redPkgInterval min="1000" max="3000" />
+			<!-- 发包个数 -->
+			<redPkgNums min="10" max="10" />
+			<!-- 使用游戏控制器 -->
+			<userGameController>true</userGameController>
+		</gameGroupConfig>
+	</merchant>
+
+
+
+
+	<!-- 测试报告配置,支持csv(后期自持html格式) -->
+	<TestReportConfig>
+		<report>
+			<path>report</path>
+			<prefix>qg-game-perf-report</prefix>
+			<format>csv</format>
+		</report>
+		<!-- <report> <path></path> <format>html</format> </report> -->
+	</TestReportConfig>
+</TestConfig>
